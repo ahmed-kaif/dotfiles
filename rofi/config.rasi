@@ -1,0 +1,8 @@
+configuration {
+	width:50%;
+	show-icons: true;
+	display-window:"Windows :";
+	display-drun:"Applications :";
+	theme:"/usr/share/rofi/themes/mytheme.rasi";
+	icon-theme:"Papirus-Dark";
+}
