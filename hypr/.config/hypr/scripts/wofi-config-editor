@@ -1,0 +1,73 @@
+#!/bin/bash
+
+## Files
+CONFIG="$HOME/.config/hypr/wofi/config"
+STYLE="$HOME/.config/hypr/wofi/style.css"
+COLORS="$HOME/.config/hypr/wofi/colors"
+
+term="alacritty"
+hypr_config="$HOME/.config/hypr"
+## Wofi Command
+wofi_command="wofi --show dmenu --prompt 'Edit...'\
+			--conf ${CONFIG} --style ${STYLE} --color ${COLORS} \
+			--width=350 --height=380 \
+			--cache-file=/dev/null \
+			--hide-scroll --no-actions \
+			--define=matching=fuzzy"
+
+
+menu(){
+  printf "1. Hyprland\n"
+  printf "2. Alacritty\n"
+  printf "3. Kitty\n"
+  printf "4. Waybar Config\n"
+  printf "5. Waybar Style\n"
+  printf "6. Wofi\n"
+  printf "7. Mako\n"
+  printf "8. Bash\n"
+  printf "9. Scripts\n"
+}
+
+main() {
+  choice=$(menu | ${wofi_command} | cut -d. -f1)
+
+  case $choice in
+    1)
+      $term -e nvim "$hypr_config/hyprland.conf" 
+      return
+      ;;
+    2)
+      $term -e nvim "$HOME/.config/alacritty/alacritty.yml"
+      return
+      ;;
+    3)
+      $term -e nvim "$HOME/.config/kitty/kitty.conf"
+      return
+      ;;
+    4)
+      $term -e nvim "$hypr_config/waybar/catppuccin/config" 
+      return
+      ;;
+    5)
+      $term -e nvim "$hypr_config/waybar/catppuccin/style.css" 
+      return
+      ;;
+    6)
+      $term -e nvim "$hypr_config/wofi/config"
+      return
+      ;;
+    7)
+      $term -e nvim "$hypr_config/mako/config"
+      return
+      ;;
+    8)
+      $term -e nvim "$HOME/.bashrc-personal"
+      return
+      ;;
+    9)
+      $term --working-directory="$hypr_config/scripts/"
+      return
+      ;;
+  esac
+}
+pkill -f http && notify-send "Lofi Radio stopped" || main

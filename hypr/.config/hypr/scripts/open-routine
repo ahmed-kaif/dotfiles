@@ -1,0 +1,3 @@
+#!/bin/bash
+ROUTINE_PATH="$HOME/Documents/routine.pdf"
+zathura $ROUTINE_PATH

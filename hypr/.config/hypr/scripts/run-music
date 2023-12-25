@@ -1,0 +1,3 @@
+#!/bin/bash
+kitty --class cava -T cava -e cava & disown
+kitty --class music -T music -e ncmpcpp & disown

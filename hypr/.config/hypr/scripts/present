@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+#fileName="$(fzf)"
+
+fd --type f --extension pdf | fzf --bind 'enter:execute-silent(sioyek --execute-command toggle_presentation_mode & disown)+abort'

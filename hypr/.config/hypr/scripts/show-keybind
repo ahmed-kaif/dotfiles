@@ -1,0 +1,9 @@
+#!/bin/bash
+file_path="$HOME/.config/hypr/cheatsheet.md"
+yad --text-info\
+    --filename=$file_path \
+    --fontname="JetBrainsMono Nerd Font 14"\
+    --no-buttons --title="Keybinds"\
+    --undecorated\
+    --geometry=1280x720\
+    --timeout=10
