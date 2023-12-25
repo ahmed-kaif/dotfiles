@@ -1,0 +1,5 @@
+#!/bin/sh
+
+music_dir="$HOME/Music"
+music_icon="$HOME/.config/hypr/mako/icons/music.png"
+notify-send -r 27072 "Now Playing" "$(mpc --format '%file%' current)" -i $music_icon
