@@ -8,10 +8,10 @@ export PAGER='most'
 #type ibus-setup in terminal to change settings and start the daemon
 #delete the hashtags of the next lines and restart
 #export GTK_IM_MODULE=ibus
-#export XMODIFIERS=@im=dbus
+export XMODIFIERS=@im=dbus
 #export QT_IM_MODULE=ibus
 export CONFIG_DRM_FBDEV_EMULATION=y
-
+export QT_QPA_PLATFORM=wayland
 #PS1='[\u@\h \W]\$ '
 PS1='[\W]\$ '
 
@@ -27,6 +27,9 @@ if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -d "$HOME/.platformio/penv/bin" ] ;
+  then PATH="$HOME/.platformio/penv/bin/:$PATH"
+fi
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
 

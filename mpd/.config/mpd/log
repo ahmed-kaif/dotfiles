@@ -95,3 +95,31 @@ Dec 25 13:07 : player: played "021.mp3"
 Dec 25 13:53 : player: played "021.mp3"
 Dec 25 13:58 : player: played "021.mp3"
 Dec 25 14:01 : player: played "021.mp3"
+Dec 25 15:57 : player: played "021.mp3"
+WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
+WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
+WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
+WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
+WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
+WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
+WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
+Dec 26 18:04 : player: played "021.mp3"
+Dec 26 18:17 : player: played "044.mp3"
+Dec 28 00:03 : player: played "somewhere-only-we-know.mp3"
+Dec 28 01:30 : player: played "shounen-ki.mp3"
+Dec 28 12:47 : player: played "somewhere-only-we-know.mp3"
+Dec 28 13:23 : player: played "taballagh-bil-qaleel.mp3"
+Dec 28 18:40 : player: played "taballagh-bil-qaleel.mp3"
+Dec 28 18:45 : player: played "ya-ummi.mp3"
+Dec 28 18:48 : player: played "shounen-ki.mp3"
+Dec 29 13:07 : player: played "jinhe-sahar-nigal-gayi.mp3"
+Dec 29 16:12 : player: played "jinhe-sahar-nigal-gayi.mp3"
+Dec 30 16:29 : player: played "jinhe-sahar-nigal-gayi.mp3"
+Dec 31 17:18 : player: played "jinhe-sahar-nigal-gayi.mp3"
+Jan 01 21:41 : player: played "ab-yad-na-aao.mp3"
+Jan 01 21:49 : player: played "jinhe-sahar-nigal-gayi.mp3"
+Jan 01 21:53 : player: played "taballagh-bil-qaleel.mp3"
+Jan 01 21:58 : player: played "ya-ummi.mp3"
+WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
+WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
+WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged

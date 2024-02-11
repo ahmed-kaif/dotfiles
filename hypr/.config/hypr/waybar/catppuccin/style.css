@@ -52,11 +52,13 @@ window#waybar.hidden {
 #mpd,
 #custom-cycle_wall,
 #custom-updater,
+#custom-ibus_layout,
 #memory,
 #custom-power,
 #battery,
 #backlight,
 #pulseaudio,
+#bluetooth,
 #network,
 #clock,
 #tray {
@@ -119,6 +121,10 @@ window#waybar.hidden {
   background-color: @yellow;
 }
 
+#bluetooth {
+  background-color: @rosewater;
+}
+
 #network {
   background-color: @teal;
   padding-right: 17px;
@@ -133,12 +139,16 @@ window#waybar.hidden {
   background-color: @flamingo;
 }
 
-#custom-cycle_wall { 
+#custom-cycle_wall {
   background-color: @blue;
-} 
+}
 
 #custom-updater {
   background-color: @sapphire;
+}
+
+#custom-ibus_layout {
+  background-color: @red;
 }
 
 #mpd {

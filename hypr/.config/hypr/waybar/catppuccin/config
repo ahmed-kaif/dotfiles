@@ -12,9 +12,11 @@
     ],
     "modules-right": [
         "tray",
+	"custom/ibus_layout",
 	"custom/updater",
 	"custom/cycle_wall",
         "memory",
+        "bluetooth",
         "network",
         "pulseaudio",
         "battery",
@@ -67,78 +69,84 @@
         "format-alt": "  {:%a, %d %b %Y}",
         "format": "  {:%I:%M %p}"
     },
+    "bluetooth": {
+    "format": "󰂯",
+    "format-off": "󰂲",
+    "on-click": "blueberry",
+    "tooltip-format": "{status}"
+    },
     "network": {
-        "format-wifi" : "{icon}",
-        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
-        "format-ethernet": "󰀂",
-	"format-alt" : "󱛇",
-        "format-disconnected" : "󰖪",
-	"tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-        "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-	"tooltip-format-disconnected": "Disconnected",
-	"on-click": "kitty --class update -T update -o font_size=13 -e nmtui",
-        "on-click-right": "~/.config/rofi/wifi/wifinew.sh &",
-	"interval": 5,
-	"nospacing": 1,
+      "format-wifi" : "{icon}",
+      "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+      "format-ethernet": "󰀂",
+      "format-alt" : "󱛇",
+      "format-disconnected" : "󰖪",
+      "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+      "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+      "tooltip-format-disconnected": "Disconnected",
+      "on-click": "kitty --class update -T update -o font_size=13 -e nmtui",
+      "on-click-right": "~/.config/rofi/wifi/wifinew.sh &",
+      "interval": 5,
+      "nospacing": 1,
     },
     "pulseaudio": {
-        "format": "{icon}",
-        "format-bluetooth": "󰂰",
-        "nospacing": 1,
-        "tooltip-format": "Volume : {volume}%",
-        "format-muted": "󰝟",
-        "format-icons": {
-            "headphone": "",
-            "default": ["󰖀","󰕾",""]
-        },
-        "on-click": "pamixer -t",
-	"on-click-right": "pavucontrol",
-        "scroll-step": 1
+      "format": "{icon}",
+      "format-bluetooth": "󰂰",
+      "nospacing": 1,
+      "tooltip-format": "Volume : {volume}%",
+      "format-muted": "󰝟",
+      "format-icons": {
+        "headphone": "",
+        "default": ["󰖀","󰕾",""]
+      },
+      "on-click": "pamixer -t",
+      "on-click-right": "pavucontrol",
+      "scroll-step": 1
     },
     "custom/logo": {
-        "format": " ",
-        "tooltip": false,
-        "on-click": "~/.config/hypr/scripts/fullmenu &"
+      "format": " ",
+      "tooltip": false,
+      "on-click": "~/.config/hypr/scripts/fullmenu &"
     },
     "battery": {
-	"bat": "BAT0",
-        "format": "{capacity}% {icon}",
-        "format-icons": {
-            "charging": [
-                "󰢜",
-                "󰂆",
-                "󰂇",
-                "󰂈",
-                "󰢝",
-                "󰂉",
-                "󰢞",
-                "󰂊",
-                "󰂋",
-                "󰂅"
-            ],
-            "default": [
-                "󰁺",
-                "󰁻",
-                "󰁼",
-                "󰁽",
-                "󰁾",
-                "󰁿",
-                "󰂀",
-                "󰂁",
-                "󰂂",
-                "󰁹"
-            ]
-        },
-        "format-full": "Charged ",
-	"format-alt": "{time}",
-	"format-time": "{H}h {M}min",
-        "interval": 5,
-        "states": {
-            "warning": 20,
-            "critical": 10
-        },
-        "tooltip": false,
-	"on-click-right": "~/.config/hypr/scripts/glassmorphismToggle" 
+      "bat": "BAT0",
+      "format": "{capacity}% {icon}",
+      "format-icons": {
+        "charging": [
+          "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+        ],
+        "default": [
+          "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+        ]
+      },
+      "format-full": "Charged ",
+      "format-alt": "{time}",
+      "format-time": "{H}h {M}min",
+      "interval": 5,
+      "states": {
+        "warning": 20,
+        "critical": 10
+      },
+      "tooltip": false,
+      "on-click-right": "~/.config/hypr/scripts/glassmorphismToggle"
     },
     "custom/power": {
         "format": "󰤆",
@@ -156,6 +164,12 @@
 	"format" : "󰸉",
 	"on-click": "~/.config/hypr/scripts/changeWallpaper",
 	"tooltip-format": "Change Wallpaper"
+    },
+   "custom/ibus_layout": {
+    "exec": "sleep 0.1s && cat ~/.cache/ibus-layout",
+    "on-click": "exec ~/.config/hypr/scripts/ibusToggle",
+    "interval": 3,
+    "tooltip": false,
     },
    "mpd": {
 	   "format": "{stateIcon} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
