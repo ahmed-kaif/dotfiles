@@ -65,7 +65,6 @@
       "urgent": "",
       "default": ""
     },
-    "sort-by-number": true,
     "persistent_workspaces": {
 	    "1": [],
 	    "2": [],

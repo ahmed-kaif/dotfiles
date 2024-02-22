@@ -36,9 +36,9 @@ bind "set completion-ignore-case on"
 ### ALIASES ###
 
 #list
-alias ls='eza --long --color=auto -h'
+alias ls='eza --long --icons --color=auto -h'
 alias la='ls -a'
-alias ll='ls -alFh'
+alias ll='ls -alh'
 alias l='ls'
 alias l.="ls -A | egrep '^\.'"
 alias listdir="ls -d */ > list"
