@@ -1,7 +1,7 @@
 alias clients="hyprctl clients"
 alias nv="nvim"
 alias vim="nvim"
-alias rmexe="find . -type f -exec sh -c 'file -b --mime-type "$1" | grep -q \"application/x-pie-executable\" ' Find {} \; -a -exec rm {} \;"
+alias rmexe="find . -type f -exec sh -c 'file -b --mime-type "$1" | grep -q 'application/x-pie-executable' ' Find {} \; -a -exec rm {} \;"
 
 # fzf
 
