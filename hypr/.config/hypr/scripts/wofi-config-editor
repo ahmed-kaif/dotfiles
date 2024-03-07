@@ -25,7 +25,8 @@ menu(){
   printf "6. Wofi\n"
   printf "7. Mako\n"
   printf "8. Bash\n"
-  printf "9. Scripts\n"
+  printf "9. zsh\n"
+  printf "10. Scripts\n"
 }
 
 main() {
@@ -65,6 +66,10 @@ main() {
       return
       ;;
     9)
+      $term -e nvim "$HOME/.zshrc-personal"
+      return
+      ;;
+    10)
       $term --working-directory="$hypr_config/scripts/"
       return
       ;;

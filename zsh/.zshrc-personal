@@ -2,6 +2,7 @@ alias clients="hyprctl clients"
 alias nv="nvim"
 alias vim="nvim"
 alias rmexe="find . -type f -exec sh -c 'file -b --mime-type "$1" | grep -q 'application/x-pie-executable' ' Find {} \; -a -exec rm {} \;"
+alias activate="source venv/bin/activate"
 
 # fzf
 
@@ -194,6 +195,24 @@ ex=:\
 *.nix=:\
 *.tex=:\
 "
+alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+alias nvim-kick="NVIM_APPNAME=kickstart nvim"
+alias nvim-chad="NVIM_APPNAME=NvChad nvim"
+alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+
+function nvims() {
+  items=("default" "kickstart" "LazyVim" "NvChad" "AstroNvim")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
+
+bindkey -s ^a "nvims\n"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 eval "$(_AUTO_CPUFREQ_COMPLETE=zsh_source auto-cpufreq)"
