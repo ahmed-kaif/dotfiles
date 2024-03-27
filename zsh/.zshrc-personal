@@ -5,6 +5,7 @@ alias rmexe="find . -type f -exec sh -c 'file -b --mime-type "$1" | grep -q 'app
 alias activate="source venv/bin/activate"
 alias eig="python ~/linear-algebra/eigen.py"
 alias rank="python ~/linear-algebra/rank.py"
+alias lin="python ~/linear-algebra/main.py"
 # fzf
 
 export MVT_VT_API_KEY="54da6fa199528a15494bd9fc4a12d9d013aed1979fc507e4bbc0cda5ecdacd0f"
