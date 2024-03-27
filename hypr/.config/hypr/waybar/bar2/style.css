@@ -69,7 +69,7 @@ window#waybar {
     /* border-radius: 50%; */
     /* background-color: @base; */
     margin: 3px 3px;
-    padding: 4 6 2 0;
+    /* padding: 4 6 2 0; */
 }
 
 #workspaces button:hover {
@@ -85,6 +85,11 @@ window#waybar {
 #workspaces button:hover * {
     color: @mauve;
     background-color: @base;
+}
+
+#workspaces button.active {
+    border-radius: 0px;
+    border: 2px solid @mauve;
 }
 
 #workspaces * {

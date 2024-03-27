@@ -38,7 +38,7 @@
     //"disable-scroll": true,
     "all-outputs": true,
     // "format": "< %g >",
-    // "format_focused" : "< %g ● >",
+    //"format_focused" : "< %g ● >",
     //"format-icons": {
     //  "1": "",
     //  "2": "",
@@ -66,8 +66,13 @@
       "default": ""
     },
     "persistent_workspaces": {
-    	"*": "5",
-    }
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+    },
+    "show-special": true,
   },
   "mpd": {
     "tooltip": true,
