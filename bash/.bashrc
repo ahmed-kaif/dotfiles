@@ -421,4 +421,4 @@ neofetch
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"
 
-eval "$(_AUTO_CPUFREQ_COMPLETE=bash_source auto-cpufreq)"
+#eval "$(_AUTO_CPUFREQ_COMPLETE=bash_source auto-cpufreq)"
