@@ -1,8 +1,7 @@
-sw_volume: 68
+sw_volume: 98
 audio_device_state:1:pulseaudio
 audio_device_state:1:Visualizer
 state: stop
-current: 0
 random: 0
 repeat: 0
 single: 0
@@ -13,6 +12,8 @@ mixrampdelay: -1.000000
 playlist_begin
 0:ab-yad-na-aao.mp3
 1:jinhe-sahar-nigal-gayi.mp3
-2:taballagh-bil-qaleel.mp3
-3:ya-ummi.mp3
+2:ya-ummi.mp3
+3:taballagh-bil-qaleel.mp3
+4:shounen-ki.mp3
+5:015.mp3
 playlist_end
