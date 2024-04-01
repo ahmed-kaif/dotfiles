@@ -74,6 +74,7 @@ bluez
 bluez-libs
 bluez-utils
 brave-bin
+brightnessctl
 brillo
 broadcom-wl-dkms
 btop
@@ -106,6 +107,7 @@ efibootmgr
 eog
 espeak-ng
 ethtool
+evince
 exfatprogs
 exo
 expac
@@ -168,7 +170,9 @@ htop
 hw-probe
 hwinfo
 hyperv
+hypridle
 hyprland-git
+hyprlock
 hyprpicker-git
 imagemagick
 intltool
@@ -259,6 +263,7 @@ numlockx
 nvme-cli
 nvtop
 nwg-drawer-bin
+nwg-look
 obs-studio
 oh-my-zsh-git
 open-iscsi
@@ -295,10 +300,13 @@ pv
 python-pyparted
 python-pywal
 python-rich
+python-sympy
 python-textual
 python-virtualenv
 qt5-wayland
 qt5ct
+quarto-cli-bin
+qutebrowser
 rate-mirrors-bin
 refind
 reflector
@@ -322,6 +330,7 @@ sof-firmware
 squashfs-tools
 starship
 stow
+sublime-text-4
 sudo
 surfn-icons-git
 swaybg
@@ -375,7 +384,7 @@ vim
 visual-studio-code-bin
 vpnc
 w3m
-waybar-hyprland-git
+waybar
 waycheck
 waydroid
 wd719x-firmware

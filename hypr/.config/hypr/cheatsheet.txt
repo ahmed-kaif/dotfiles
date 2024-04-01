@@ -18,6 +18,7 @@
   PrintSrc                *full screenshot*
   Shift  PrintSrc         *active window screenshot*
   Ctrl   PrintSrc         *full screenshot + timer*
+  $mainMod CTRL  Print    *screenshot area*
 
 # application shortcuts
   Ctrl    Alt U           *pavucontrol*
@@ -47,6 +48,17 @@
   Super   Shift  Return   *file manager* (`thunar`)
   Super   F1              *browser* (`firefox`)
 
+
+# Mainmod + Function keys
+  Super F1  $browser
+  Super F2  $editor
+  Super F3  inkscape
+  Super F4  gimp
+  Super F5  meld
+  Super F6  vlc
+  Super F7  virtualbox
+  Super F8  $files
+
 # Resize
   Super   SHIFT  H        resizeactive,-50 0
   Super   SHIFT  L        resizeactive,50 0
@@ -68,6 +80,21 @@
 # workspaces
   Super         1 .. 0    *switch to workspace 1 .. 10*
   Super  Shift  1 .. 0    *move container to workspace 1 .. 10*
+
+
+  $mainMod, G, togglegroup
+  $mainMod, tab, workspace, m+1
+  $mainMod SHIFT, tab, workspace, m-1
+  ALT, tab, workspace, m+1
+  ALT SHIFT, tab, workspace, m-1
+  
+  $mainMod, O, exec, $colorpicker
+  $mainMod SHIFT, O, exec, $term --class hyprpicker --hold -e hyprpicker
+  $mainMod CTRL, S, exec, $wofi_beats
+  CTRL ALT, period, exec, $wofi_config_editor
+
+# Screenshot keybindings
+
 
 # notes
   - *Hyprland* configuration files are in `~/.config/hypr/`.
