@@ -530,6 +530,8 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
 
 vim.keymap.set('v', '<leader>sc', ':Silicon<CR>' , { desc = '[S]creen [C]apture' })
+-- open file_browser with the path of the current buffer
+vim.keymap.set("n", "<space>fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
 
 
 -- [[ Configure Treesitter ]]
