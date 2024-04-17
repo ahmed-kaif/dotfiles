@@ -27,6 +27,7 @@ menu(){
   printf "8. Bash\n"
   printf "9. zsh\n"
   printf "10. Scripts\n"
+  printf "11. Nvim\n"
 }
 
 main() {
@@ -71,6 +72,10 @@ main() {
       ;;
     10)
       $term --working-directory="$hypr_config/scripts/"
+      return
+      ;;
+    11)
+      $term -e nvim "$HOME/.config/nvim/init.lua"
       return
       ;;
   esac
