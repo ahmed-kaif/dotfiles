@@ -79,6 +79,11 @@ main() {
       mpv --shuffle --ytdl-raw-options="cookies=/tmp/cookies.txt" --vid=no https://www.youtube.com/watch?v=GaW13eDQO6s
       return
       ;;
+    10)
+      notification ;
+      mpv --vid=no "https://www.youtube.com/watch?v=VAvL-rm476c"
+      return
+      ;;
   esac
 }
 

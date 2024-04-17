@@ -123,3 +123,55 @@ Jan 01 21:58 : player: played "ya-ummi.mp3"
 WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
 WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
 WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
+Apr 17 21:16 : exception: Failed to decode /home/thunder/Music/ab-yad-na-aao.mp3; Failed to open '/home/thunder/Music/ab-yad-na-aao.mp3': No such file or directory
+Apr 17 21:16 : player: played "ab-yad-na-aao.mp3"
+Apr 17 21:16 : exception: Failed to decode /home/thunder/Music/ab-yad-na-aao.mp3; Failed to open '/home/thunder/Music/ab-yad-na-aao.mp3': No such file or directory
+Apr 17 21:16 : exception: Failed to decode /home/thunder/Music/jinhe-sahar-nigal-gayi.mp3; Failed to open '/home/thunder/Music/jinhe-sahar-nigal-gayi.mp3': No such file or directory
+Apr 17 21:16 : exception: Failed to decode /home/thunder/Music/ya-ummi.mp3; Failed to open '/home/thunder/Music/ya-ummi.mp3': No such file or directory
+Apr 17 21:16 : player: played "jinhe-sahar-nigal-gayi.mp3"
+Apr 17 21:16 : exception: Failed to decode /home/thunder/Music/ya-ummi.mp3; Failed to open '/home/thunder/Music/ya-ummi.mp3': No such file or directory
+Apr 17 21:16 : player: played "ya-ummi.mp3"
+Apr 17 21:16 : exception: Failed to decode /home/thunder/Music/taballagh-bil-qaleel.mp3; Failed to open '/home/thunder/Music/taballagh-bil-qaleel.mp3': No such file or directory
+Apr 17 21:16 : player: played "taballagh-bil-qaleel.mp3"
+Apr 17 21:16 : exception: Failed to decode /home/thunder/Music/shounen-ki.mp3; Failed to open '/home/thunder/Music/shounen-ki.mp3': No such file or directory
+Apr 17 21:16 : player: played "shounen-ki.mp3"
+Apr 17 21:16 : exception: Failed to decode /home/thunder/Music/015.mp3; Failed to open '/home/thunder/Music/015.mp3': No such file or directory
+Apr 17 21:16 : player: played "015.mp3"
+Apr 17 21:16 : exception: Failed to decode /home/thunder/Music/015.mp3; Failed to open '/home/thunder/Music/015.mp3': No such file or directory
+Apr 17 21:16 : player: played "015.mp3"
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/ab-yad-na-aao.mp3; Failed to open '/home/thunder/Music/ab-yad-na-aao.mp3': No such file or directory
+Apr 17 22:15 : player: played "ab-yad-na-aao.mp3"
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/jinhe-sahar-nigal-gayi.mp3; Failed to open '/home/thunder/Music/jinhe-sahar-nigal-gayi.mp3': No such file or directory
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/ya-ummi.mp3; Failed to open '/home/thunder/Music/ya-ummi.mp3': No such file or directory
+Apr 17 22:15 : player: played "jinhe-sahar-nigal-gayi.mp3"
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/ya-ummi.mp3; Failed to open '/home/thunder/Music/ya-ummi.mp3': No such file or directory
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/taballagh-bil-qaleel.mp3; Failed to open '/home/thunder/Music/taballagh-bil-qaleel.mp3': No such file or directory
+Apr 17 22:15 : player: played "ya-ummi.mp3"
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/taballagh-bil-qaleel.mp3; Failed to open '/home/thunder/Music/taballagh-bil-qaleel.mp3': No such file or directory
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/shounen-ki.mp3; Failed to open '/home/thunder/Music/shounen-ki.mp3': No such file or directory
+Apr 17 22:15 : player: played "taballagh-bil-qaleel.mp3"
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/shounen-ki.mp3; Failed to open '/home/thunder/Music/shounen-ki.mp3': No such file or directory
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/015.mp3; Failed to open '/home/thunder/Music/015.mp3': No such file or directory
+Apr 17 22:15 : player: played "shounen-ki.mp3"
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/015.mp3; Failed to open '/home/thunder/Music/015.mp3': No such file or directory
+Apr 17 22:15 : player: played "015.mp3"
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/015.mp3; Failed to open '/home/thunder/Music/015.mp3': No such file or directory
+Apr 17 22:15 : player: played "015.mp3"
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/ab-yad-na-aao.mp3; Failed to open '/home/thunder/Music/ab-yad-na-aao.mp3': No such file or directory
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/jinhe-sahar-nigal-gayi.mp3; Failed to open '/home/thunder/Music/jinhe-sahar-nigal-gayi.mp3': No such file or directory
+Apr 17 22:15 : player: played "ab-yad-na-aao.mp3"
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/jinhe-sahar-nigal-gayi.mp3; Failed to open '/home/thunder/Music/jinhe-sahar-nigal-gayi.mp3': No such file or directory
+Apr 17 22:15 : player: played "jinhe-sahar-nigal-gayi.mp3"
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/ya-ummi.mp3; Failed to open '/home/thunder/Music/ya-ummi.mp3': No such file or directory
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/taballagh-bil-qaleel.mp3; Failed to open '/home/thunder/Music/taballagh-bil-qaleel.mp3': No such file or directory
+Apr 17 22:15 : player: played "ya-ummi.mp3"
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/taballagh-bil-qaleel.mp3; Failed to open '/home/thunder/Music/taballagh-bil-qaleel.mp3': No such file or directory
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/shounen-ki.mp3; Failed to open '/home/thunder/Music/shounen-ki.mp3': No such file or directory
+Apr 17 22:15 : player: played "taballagh-bil-qaleel.mp3"
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/shounen-ki.mp3; Failed to open '/home/thunder/Music/shounen-ki.mp3': No such file or directory
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/015.mp3; Failed to open '/home/thunder/Music/015.mp3': No such file or directory
+Apr 17 22:15 : player: played "shounen-ki.mp3"
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/015.mp3; Failed to open '/home/thunder/Music/015.mp3': No such file or directory
+Apr 17 22:15 : player: played "015.mp3"
+Apr 17 22:15 : exception: Failed to decode /home/thunder/Music/015.mp3; Failed to open '/home/thunder/Music/015.mp3': No such file or directory
+Apr 17 22:15 : player: played "015.mp3"
