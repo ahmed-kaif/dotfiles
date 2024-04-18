@@ -1,43 +1,3 @@
---[[
-
-=====================================================================
-==================== READ THIS BEFORE CONTINUING ====================
-=====================================================================
-
-Kickstart.nvim is *not* a distribution.
-
-Kickstart.nvim is a template for your own configuration.
-  The goal is that you can read every line of code, top-to-bottom, understand
-  what your configuration is doing, and modify it to suit your needs.
-
-  Once you've done that, you should start exploring, configuring and tinkering to
-  explore Neovim!
-
-  If you don't know anything about Lua, I recommend taking some time to read through
-  a guide. One possible example:
-  - https://learnxinyminutes.com/docs/lua/
-
-
-  And then you can explore or search through `:help lua-guide`
-  - https://neovim.io/doc/user/lua-guide.html
-
-
-Kickstart Guide:
-
-I have left several `:help X` comments throughout the init.lua
-You should run that command and read that help section for more information.
-
-In addition, I have some `NOTE:` items throughout the file.
-These are for you, the reader to help understand what is happening. Feel free to delete
-them once you know what you're doing, but they should serve as a guide for when you
-are first encountering a few different constructs in your nvim config.
-
-I hope you enjoy your Neovim journey,
-- TJ
-
-P.S. You can delete this when you're done too. It's your config now :)
---]]
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -88,7 +48,8 @@ require('lazy').setup({
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim',
+      {
+        'j-hui/fidget.nvim',
         opts = {
           notification = {
             window = {
@@ -121,7 +82,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+  { 'folke/which-key.nvim',  opts = {} },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -196,7 +157,7 @@ require('lazy').setup({
       end,
     },
   },
-  -- Custom plugins 
+  -- Custom plugins
   --
 
   --[[  {
@@ -215,23 +176,23 @@ require('lazy').setup({
     config = function()
       require("catppuccin").setup({
         flavour = "mocha", -- latte, frappe, macchiato, mocha
-        background = { -- :h background
+        background = {     -- :h background
           light = "latte",
           dark = "mocha",
         },
         transparent_background = true, -- disables setting the background color.
-        show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
-        term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
+        show_end_of_buffer = false,    -- shows the '~' characters after the end of buffers
+        term_colors = true,            -- sets terminal colors (e.g. `g:terminal_color_0`)
         dim_inactive = {
-          enabled = false, -- dims the background color of inactive window
+          enabled = false,             -- dims the background color of inactive window
           shade = "dark",
-          percentage = 0.15, -- percentage of the shade to apply to the inactive window
+          percentage = 0.15,           -- percentage of the shade to apply to the inactive window
         },
-        no_italic = false, -- Force no italic
-        no_bold = false, -- Force no bold
-        no_underline = false, -- Force no underline
-        styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-          comments = { "italic" }, -- Change the style of comments
+        no_italic = false,             -- Force no italic
+        no_bold = false,               -- Force no bold
+        no_underline = false,          -- Force no underline
+        styles = {                     -- Handles the styles of general hi groups (see `:h highlight-args`):
+          comments = { "italic" },     -- Change the style of comments
           conditionals = { "italic" },
           loops = {},
           functions = {},
@@ -265,7 +226,6 @@ require('lazy').setup({
       })
 
       vim.cmd.colorscheme "catppuccin"
-
     end,
   },
   {
@@ -274,7 +234,7 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
+        icons_enabled = true,
         theme = 'catppuccin',
         component_separators = '|',
         section_separators = '',
@@ -314,7 +274,38 @@ require('lazy').setup({
       },
     },
   },
-
+  {
+    "debugloop/telescope-undo.nvim",
+    dependencies = { -- note how they're inverted to above example
+      {
+        "nvim-telescope/telescope.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+      },
+    },
+    keys = {
+      { -- lazy style key map
+        "<leader>u",
+        "<cmd>Telescope undo<cr>",
+        desc = "undo history",
+      },
+    },
+    opts = {
+      -- don't use `defaults = { }` here, do this in the main telescope spec
+      extensions = {
+        undo = {
+          -- telescope-undo.nvim config, see below
+        },
+        -- no other extensions here, they can have their own spec too
+      },
+    },
+    config = function(_, opts)
+      -- Calling telescope's setup from multiple specs does not hurt, it will happily merge the
+      -- configs for us. We won't use data, as everything is in it's own namespace (telescope
+      -- defaults, as well as each extension).
+      require("telescope").setup(opts)
+      require("telescope").load_extension("undo")
+    end,
+  },
   {
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
@@ -328,7 +319,7 @@ require('lazy').setup({
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
-  -- require 'kickstart.plugins.autoformat',
+  require 'kickstart.plugins.autoformat',
   -- require 'kickstart.plugins.debug',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
@@ -337,7 +328,7 @@ require('lazy').setup({
   --    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-   { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {})
 
 -- [[ Setting options ]]
@@ -382,7 +373,7 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- Set colorcolumn
-vim.opt.colorcolumn= "80"
+vim.opt.colorcolumn = "80"
 
 -- [[ Basic Keymaps ]]
 
@@ -393,6 +384,8 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set('i', 'jj', "<ESC>")
+vim.keymap.set('i', 'jk', "<ESC>")
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
@@ -400,7 +393,7 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
--- code Runner 
+-- code Runner
 
 vim.keymap.set('n', '<leader>run', ':RunCode<CR>', { noremap = true, silent = false })
 vim.keymap.set('n', '<leader>rf', ':RunFile<CR>', { noremap = true, silent = false })
@@ -414,27 +407,27 @@ vim.keymap.set('n', '<leader>crp', ':CRProjects<CR>', { noremap = true, silent =
 -- Knap latex
 -- set shorter name for keymap function
 -- F5 processes the document once, and refreshes the view
-vim.keymap.set({ 'n', 'v', 'i' },'<F5>', function() require("knap").process_once() end)
-
+vim.keymap.set({ 'n', 'v', 'i' }, '<F5>', function() require("knap").process_once() end)
 -- F6 closes the viewer application, and allows settings to be reset
-vim.keymap.set({ 'n', 'v', 'i' },'<F6>', function() require("knap").close_viewer() end)
-
+vim.keymap.set({ 'n', 'v', 'i' }, '<F6>', function() require("knap").close_viewer() end)
 -- F7 toggles the auto-processing on and off
-vim.keymap.set({ 'n', 'v', 'i' },'<F7>', function() require("knap").toggle_autopreviewing() end)
-
+vim.keymap.set({ 'n', 'v', 'i' }, '<F7>', function() require("knap").toggle_autopreviewing() end)
 -- F8 invokes a SyncTeX forward search, or similar, where appropriate
-vim.keymap.set({ 'n', 'v', 'i' },'<F8>', function() require("knap").forward_jump() end)
+vim.keymap.set({ 'n', 'v', 'i' }, '<F8>', function() require("knap").forward_jump() end)
 
 
 -- [[ Knap settings ]]
 local gknapsettings = {
-    texoutputext = "pdf",
-    textopdf = "pdflatex -shell-escape -interaction=batchmode -halt-on-error -synctex=1 %docroot%",
-    textopdfviewerlaunch = "sioyek --inverse-search 'nvim --headless -es --cmd \"lua require('\"'\"'knaphelper'\"'\"').relayjump('\"'\"'%servername%'\"'\"','\"'\"'%1'\"'\"',%2,%3)\"' --new-window %outputfile%",
-    textopdfviewerrefresh = "none",
-    textopdfforwardjump = "sioyek --inverse-search 'nvim --headless -es --cmd \"lua require('\"'\"'knaphelper'\"'\"').relayjump('\"'\"'%servername%'\"'\"','\"'\"'%1'\"'\"',%2,%3)\"' --reuse-window --forward-search-file %srcfile% --forward-search-line %line% %outputfile%",
-    textopdfshorterror = "A=%outputfile% ; LOGFILE=\"${A%.pdf}.log\" ; rubber-info \"$LOGFILE\" 2>&1 | head -n 1",
-    delay = 250}
+  texoutputext = "pdf",
+  textopdf = "pdflatex -shell-escape -interaction=batchmode -halt-on-error -synctex=1 %docroot%",
+  textopdfviewerlaunch =
+  "sioyek --inverse-search 'nvim --headless -es --cmd \"lua require('\"'\"'knaphelper'\"'\"').relayjump('\"'\"'%servername%'\"'\"','\"'\"'%1'\"'\"',%2,%3)\"' --new-window %outputfile%",
+  textopdfviewerrefresh = "none",
+  textopdfforwardjump =
+  "sioyek --inverse-search 'nvim --headless -es --cmd \"lua require('\"'\"'knaphelper'\"'\"').relayjump('\"'\"'%servername%'\"'\"','\"'\"'%1'\"'\"',%2,%3)\"' --reuse-window --forward-search-file %srcfile% --forward-search-line %line% %outputfile%",
+  textopdfshorterror = "A=%outputfile% ; LOGFILE=\"${A%.pdf}.log\" ; rubber-info \"$LOGFILE\" 2>&1 | head -n 1",
+  delay = 250
+}
 vim.g.knap_settings = gknapsettings
 
 
@@ -528,6 +521,11 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
+
+vim.keymap.set('v', '<leader>sc', ':Silicon<CR>', { desc = '[S]creen [C]apture' })
+-- open file_browser with the path of the current buffer
+vim.keymap.set("n", "<space>fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
+
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
@@ -675,12 +673,12 @@ require('mason-lspconfig').setup()
 --  If you want to override the default filetypes that your language server will attach to you can
 --  define the property 'filetypes' to the map in question.
 local servers = {
-  -- clangd = {},
+  clangd = {},
   -- gopls = {},
-  -- pyright = {},
+  pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
-  -- html = { filetypes = { 'html', 'twig', 'hbs'} },
+  html = { filetypes = { 'html', 'twig', 'hbs' } },
 
   lua_ls = {
     Lua = {
@@ -722,7 +720,7 @@ mason_lspconfig.setup_handlers {
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 require('luasnip.loaders.from_vscode').lazy_load()
-require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})
+require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/LuaSnip/" })
 luasnip.config.setup {}
 cmp.setup {
   snippet = {
