@@ -27,7 +27,8 @@ menu(){
   printf "6. SmoothChill\n"
   printf "7. Little Soul\n"
   printf "8. Fasetya\n"
-  printf "9. Lofi Zone"
+  printf "9. Lofi Zone\n"
+  printf "10. Nasheed Collection 1"
 }
 
 main() {
