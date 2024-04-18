@@ -236,6 +236,7 @@ alias wo="pomodoro 'work'"
 alias br="pomodoro 'break'"
 
 bindkey -s ^a "nvims\n"
+bindkey -s ^n "newsboat\n"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 #eval "$(_AUTO_CPUFREQ_COMPLETE=zsh_source auto-cpufreq)"
