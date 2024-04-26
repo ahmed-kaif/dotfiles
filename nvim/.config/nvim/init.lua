@@ -375,6 +375,8 @@ vim.o.termguicolors = true
 -- Set colorcolumn
 vim.opt.colorcolumn = "80"
 
+vim.opt.shiftwidth = 4
+
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
