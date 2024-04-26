@@ -7,21 +7,20 @@ return {
     'goolord/alpha-nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons',
       'BlakeJC94/alpha-nvim-fortune' },
-    config = function()
-      require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
+    config = function ()
+      require'alpha'.setup(require'alpha.themes.dashboard'.config)
     end
   },
   {
     "nvim-neorg/neorg",
     build = ":Neorg sync-parsers",
     dependencies = { "nvim-lua/plenary.nvim" },
-    version = "v7.0.0",
     config = function()
       require("neorg").setup {
         load = {
-          ["core.defaults"] = {},  -- Loads default behaviour
+          ["core.defaults"] = {}, -- Loads default behaviour
           ["core.concealer"] = {}, -- Adds pretty icons to your documents
-          ["core.dirman"] = {      -- Manages Neorg workspaces
+          ["core.dirman"] = { -- Manages Neorg workspaces
             config = {
               workspaces = {
                 notes = "~/notes",
@@ -32,8 +31,7 @@ return {
       }
     end,
   },
-  {
-    "CRAG666/code_runner.nvim",
+  { "CRAG666/code_runner.nvim",
     config = function()
       require('code_runner').setup({
         filetype = {
@@ -58,15 +56,12 @@ return {
       })
     end,
   },
-  {
-    'akinsho/bufferline.nvim',
-    version = "*",
-    dependencies = 'nvim-tree/nvim-web-devicons',
-    after = "catppuccin",
-    config = function()
-      require("bufferline").setup {
+  {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons',
+    after="catppuccin",
+    config = function ()
+      require("bufferline").setup{
         options = {
-          numbers = function(options)
+          numbers = function (options)
             return string.format('%s', options.raise(options.ordinal))
           end,
         },
@@ -75,7 +70,7 @@ return {
     end
   },
   {
-    'frabjous/knap',
+    'frabjous/knap';
   },
   {
     "michaelrommel/nvim-silicon",
