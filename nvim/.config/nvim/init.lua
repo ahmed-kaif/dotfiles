@@ -376,6 +376,7 @@ vim.o.termguicolors = true
 vim.opt.colorcolumn = "80"
 
 vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 
 -- [[ Basic Keymaps ]]
 
@@ -664,6 +665,8 @@ require('which-key').register({
 -- mason-lspconfig requires that these setup functions are called in this order
 -- before setting up the servers.
 require('mason').setup()
+require('java').setup()
+require('lspconfig').jdtls.setup({})
 require('mason-lspconfig').setup()
 
 -- Enable the following language servers
