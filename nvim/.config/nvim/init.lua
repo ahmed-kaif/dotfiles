@@ -663,7 +663,7 @@ require('which-key').register({
 -- mason-lspconfig requires that these setup functions are called in this order
 -- before setting up the servers.
 require('mason').setup()
-require('java').setup()
+-- require('java').setup()
 require('lspconfig').jdtls.setup({})
 require('mason-lspconfig').setup()
 
