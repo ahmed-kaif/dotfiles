@@ -398,6 +398,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- code Runner
 
 vim.keymap.set('n', '<leader>run', ':RunCode<CR>', { noremap = true, silent = false })
+vim.keymap.set('n', '<leader>b', ':RunCode<CR>', { noremap = true, silent = false })
 vim.keymap.set('n', '<leader>rf', ':RunFile<CR>', { noremap = true, silent = false })
 vim.keymap.set('n', '<leader>rft', ':RunFile tab<CR>', { noremap = true, silent = false })
 vim.keymap.set('n', '<leader>rp', ':RunProject<CR>', { noremap = true, silent = false })
