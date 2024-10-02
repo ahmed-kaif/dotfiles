@@ -1,0 +1,24 @@
+local M = {}
+local lualine = require("lualine")
+
+-- LSP clients attached to the buffer
+local function lsp_clients()
+    local clients = vim.lsp.get_active_clients()
+    local clients_list = {}
+    for _, client in pairs(clients) do
+        table.insert(clients_list, client.name)
+    end
+    return 'LSP: ' .. utils.dump(clients_list)
+end
+
+
+
+local config = {
+    sections = {
+        lualine_x = { clients_lsp }
+    }
+}
+
+lualine.setup(config)
+
+return M
