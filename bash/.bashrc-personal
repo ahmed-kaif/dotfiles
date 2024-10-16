@@ -1,15 +1,82 @@
+# # ex = EXtractor for all kinds of archives
+# # usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *.deb)       ar x $1      ;;
+      *.tar.xz)    tar xf $1    ;;
+      *.tar.zst)   tar xf $1    ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+#####################
+###### ALIAS ########
+#####################
+#list
+alias ls='eza --long --icons --color=auto -h'
+alias la='ls -a'
+alias ll='ls -alh'
+alias l='ls'
+alias l.="ls -A | egrep '^\.'"
+alias listdir="ls -d */ > list"
+alias cls="clear"
+
+# readable output
+alias df='df -h'
+
+# shutdown or reboot
+alias ssn="sudo shutdown now"
+alias sr="reboot"
+
+# edit files
+alias nfstab="sudo $EDITOR /etc/fstab"
+
+# git alias
+alias gs="git status"
+alias ga="git add ."          # stage all files
+alias gal="git add -u"        # satge only modified and deleted files
+alias gl="git log"            # verbose log
+alias gll="git log --oneline" # simplified log
+alias pull="git pull"
+alias gpush="git push"
+
+
+#youtube download
+alias yta-aac="yt-dlp --extract-audio --audio-format aac "
+alias yta-best="yt-dlp --extract-audio --audio-format best "
+alias yta-flac="yt-dlp --extract-audio --audio-format flac "
+alias yta-mp3="yt-dlp --extract-audio --audio-format mp3 "
+alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
+
 alias clients="hyprctl clients"
 alias nv="nvim"
 alias vim="nvim"
 alias rmexe="find . -type f -exec sh -c 'file -b --mime-type "$1" | grep -q \"application/x-pie-executable\" ' Find {} \; -a -exec rm {} \;"
-
-# fzf
+alias edit="fd --type f --color=never --hidden | fzf --bind 'enter:become(nvim {})'"
+alias mkdir="mkdir -pv"
+alias genv="printenv | rg -i"
+alias path='echo -e ${PATH//:/\\n} | fzf'
 
 export MVT_VT_API_KEY="54da6fa199528a15494bd9fc4a12d9d013aed1979fc507e4bbc0cda5ecdacd0f"
-
-source /usr/share/fzf/completion.bash
-source /usr/share/fzf/key-bindings.bash
-
+######################
+########  FZF ########
+######################
+eval "$(fzf --bash)"
 export FZF_DEFAULT_COMMAND='fd --type f --color=never'
 export FZF_CTRL_T_COMMAND='fd --type f --color=never --hidden'
 
@@ -30,8 +97,7 @@ export FZF_DEFAULT_OPTS=" \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
-alias edit="fd --type f --color=never --hidden | fzf --bind 'enter:become(nvim {})'"
-
+###### LF file manager ########
 export LF_ICONS="\
 di=:\
 fi=:\
@@ -194,3 +260,4 @@ ex=:\
 *.nix=:\
 *.tex=:\
 "
+# vim: ft=sh
