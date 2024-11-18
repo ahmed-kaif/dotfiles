@@ -71,7 +71,7 @@ alias edit="fd --type f --color=never --hidden | fzf --bind 'enter:become(nvim {
 alias mkdir="mkdir -pv"
 alias genv="printenv | rg -i"
 alias path='echo -e ${PATH//:/\\n} | fzf'
-
+alias sst='ss -t'         # tcp connections only
 export MVT_VT_API_KEY="54da6fa199528a15494bd9fc4a12d9d013aed1979fc507e4bbc0cda5ecdacd0f"
 ######################
 ########  FZF ########
