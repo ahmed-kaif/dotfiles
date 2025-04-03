@@ -88,7 +88,7 @@ syn keyword gasmInstr	stosd stosw str sub subpd subps subsd subss sysenter sysex
 syn keyword gasmInstr	test ucomisd ucomiss ud2 unpckhpd unpckhps unpcklpd unpcklps
 syn keyword gasmInstr	verr verw wait wbinvd wrmsr xadd xchg xlat xlatb xor xorpd
 syn keyword gasmPreprocess 	common equ fix forward include local macro purge restore
-syn keyword gasmPreprocess	reverse struc
+syn keyword gasmPreprocess	reverse struc title .model .stack 
 syn keyword gasmDirective 	align binary code coff console discardable display dll
 syn keyword gasmDirective	elf entry executable export extern far fixups format gui
 syn keyword gasmDirective	import label ms mz native near notpageable pe public readable

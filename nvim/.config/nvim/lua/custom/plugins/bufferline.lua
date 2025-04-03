@@ -2,6 +2,8 @@ local M = {}
 local bufferline = require("bufferline")
 
 vim.keymap.set({ 'n', 'i' }, '<A-b>', function() bufferline.pick() end, { silent = true, desc = 'Pick Buffer' })
+vim.keymap.set({ 'n' }, '<leader>bco', ":BufferLineCloseOthers<CR>",
+    { silent = true, desc = '[B]uffer [C]lose [O]thers' })
 vim.keymap.set({ 'n', 'i' }, '<A-n>', function() bufferline.cycle(1) end, { silent = true, desc = 'Cycle Buffer Next' })
 vim.keymap.set({ 'n', 'i' }, '<A-p>', function() bufferline.cycle(-1) end,
     { silent = true, desc = 'Cycle Buffer Previous' })
