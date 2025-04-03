@@ -1,0 +1,51 @@
+vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
+vim.keymap.set("n", "<space>x", ":.lua<CR>")
+vim.keymap.set("v", "<space>x", ":lua<CR>")
+vim.keymap.set('i', 'jj', "<ESC>")
+vim.keymap.set('i', 'jk', "<ESC>")
+vim.keymap.set('n', 'Q', "gqq")
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+
+-- Remap for dealing with word wrap
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+-- Silicon
+vim.keymap.set('v', '<leader>sc', ':Silicon<CR>', { desc = '[S]creen [C]apture' })
+
+-- terminal
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])
+vim.keymap.set('n', '<leader>st',
+  function ()
+    vim.cmd.vnew()
+    vim.cmd.term()
+    vim.cmd.wincmd("L")
+    vim.api.nvim_win_set_width(0, 60)
+    vim.fn.chansend(vim.bo.channel, { "cls\r\n" })
+  end
+)
+
+-- navigating windows
+vim.keymap.set("t", "<A-h>", [[<C-\><C-N><C-w>h]])
+vim.keymap.set("t", "<A-j>", [[<C-\><C-N><C-w>j]])
+vim.keymap.set("t", "<A-k>", [[<C-\><C-N><C-w>k]])
+vim.keymap.set("t", "<A-l>", [[<C-\><C-N><C-w>l]])
+vim.keymap.set("i", "<A-h>", [[<C-\><C-N><C-w>h]])
+vim.keymap.set("i", "<A-j>", [[<C-\><C-N><C-w>j]])
+vim.keymap.set("i", "<A-k>", [[<C-\><C-N><C-w>k]])
+vim.keymap.set("i", "<A-l>", [[<C-\><C-N><C-w>l]])
+vim.keymap.set("n", "<A-h>", [[<C-w>h]])
+vim.keymap.set("n", "<A-j>", [[<C-w>j]])
+vim.keymap.set("n", "<A-k>", [[<C-w>k]])
+vim.keymap.set("n", "<A-l>", [[<C-w>l]])
+vim.keymap.set("t", "<A-left>", [[<C-\><C-N><C-w>h]])
+vim.keymap.set("t", "<A-down>", [[<C-\><C-N><C-w>j]])
+vim.keymap.set("t", "<A-up>", [[<C-\><C-N><C-w>k]])
+vim.keymap.set("t", "<A-right>", [[<C-\><C-N><C-w>l]])
+vim.keymap.set("i", "<A-left>", [[<C-\><C-N><C-w>h]])
+vim.keymap.set("i", "<A-down>", [[<C-\><C-N><C-w>j]])
+vim.keymap.set("i", "<A-up>", [[<C-\><C-N><C-w>k]])
+vim.keymap.set("i", "<A-right>", [[<C-\><C-N><C-w>l]])
+vim.keymap.set("n", "<A-left>", [[<C-w>h]])
+vim.keymap.set("n", "<A-down>", [[<C-w>j]])
+vim.keymap.set("n", "<A-up>", [[<C-w>k]])
+vim.keymap.set("n", "<A-right>", [[<C-w>l]])
