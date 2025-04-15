@@ -21,7 +21,7 @@
         },
         "break",
         {
-            "key": "     OS           ",
+            "key": "     OS           ",
             "keyColor": "red",
             "type": "os"
         },
@@ -80,6 +80,11 @@
             "key": "    󰍛 GPU          ",
             "keyColor": "blue",
             "type": "gpu"
+        },
+        {
+            "key": "     Disk         ",
+            "keyColor": "green",
+            "type": "disk"
         },
         {
             "key": "    󰑭 Memory       ",

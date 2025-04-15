@@ -1,0 +1,82 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+  . /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+  PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+  for rc in ~/.bashrc.d/*; do
+    if [ -f "$rc" ]; then
+      . "$rc"
+    fi
+  done
+fi
+unset rc
+p() {
+  open=xdg-open # this will open pdf file withthe default PDF viewer on KDE, xfce, LXDE and perhaps on other desktops.
+
+  fd -epdf |
+    fast-p |
+    fzf --read0 --reverse -e -d $'\t' \
+      --preview-window down:50% --preview '
+            v=$(echo {q} | tr " " "|"); 
+            echo -e {1}"\n"{2} | rg -e "^|$v" -i --color=always;
+        ' |
+    cut -z -f 1 -d $'\t' | tr -d '\n' | xargs -r --null $open >/dev/null 2>/dev/null
+}
+
+## Keybinds
+bind -x '"\C-xr": . ~/.bashrc'
+bind -x '"\C-xp": p'
+bind -x '"\C-xe": edit'
+bind -x '"\C-h": history | fzf'
+bind -x '"\C-p": pdf'
+
+#list
+alias ls='eza --long --icons --color=auto --group-directories-first -h'
+alias la='ls -a'
+alias ll='ls -alh'
+alias l='ls'
+alias l.="ls -A | egrep '^\.'"
+alias listdir="ls -d */ > list"
+alias cls="clear"
+alias vim="NVIM_APPNAME=LazyVim nvim"
+alias nv="NVIM_APPNAME=LazyVim nvim"
+alias cd="z"
+alias ff="fastfetch -c ~/.config/fastfetch/presets/12.jsonc"
+alias gs="git status"
+alias ga="git add ."
+alias ml="source ~/machine-learning/ml/bin/activate"
+alias ta="tmux a -t"
+alias nvim-my="NVIM_APPNAME=MyNvim nvim"
+alias nl="NVIM_APPNAME=LazyVim nvim"
+alias xampp="ampp.sh"
+alias syu="sudo dnf upgrade"
+alias i="sudo dnf install"
+alias pkg="dnf list --installed | fzf"
+# FZF
+alias edit='fzf --bind "enter:become(nvim {})"'
+alias pdf='fd -epdf | fzf --bind "enter:execute-silent(zathura  {})"'
+# youtube download
+alias yta-aac="yt-dlp --extract-audio --audio-format aac "
+alias yta-best="yt-dlp --extract-audio --audio-format best "
+alias yta-flac="yt-dlp --extract-audio --audio-format flac "
+alias yta-mp3="yt-dlp --extract-audio --audio-format mp3 "
+alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
+fastfetch -c ~/.config/fastfetch/presets/12.jsonc
+eval "$(composer completion bash)"
+eval "$(valet completion bash)"
+eval "$(zoxide init bash)"
+. "$HOME/.cargo/env"
+eval "$(starship init bash)"
