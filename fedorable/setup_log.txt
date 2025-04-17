@@ -1,0 +1,5 @@
+2025-04-16 00:46:06 - Installed dialog.
+2025-04-16 00:46:34 - Starship is ready to rock n roll
+2025-04-16 01:00:57 - Flatpak has now been enabled
+2025-04-16 01:01:02 - User chose to quit the script.
+2025-04-17 13:31:08 - User chose to quit the script.
