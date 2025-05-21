@@ -1,125 +1,73 @@
-Dec 16 00:47 : exception: Failed to open '/home/thunder/.config/mpd/state': No such file or directory
-Dec 16 00:47 : update: added /ab-yad-na-aao.mp3
-Dec 16 00:47 : update: added /somewhere-only-we-know.mp3
-Dec 16 00:47 : update: added /shounen-ki.mp3
-Dec 16 00:47 : update: added /jinhe-sahar-nigal-gayi.mp3
-Dec 16 01:04 : player: played "somewhere-only-we-know.mp3"
-Dec 16 01:08 : player: played "shounen-ki.mp3"
-Dec 16 01:12 : player: played "somewhere-only-we-know.mp3"
-Dec 16 01:23 : player: played "shounen-ki.mp3"
-Dec 16 01:37 : player: played "shounen-ki.mp3"
-Dec 16 01:54 : update: added /Ommi - Ahmed Bukhatir I  لسوف أعود يا أمي - أحمد بوخاطر (النسخة الأصلية) [xIZtunlWEjc].mp3
-Dec 16 01:57 : update: added /Tabalagh bil qaleel (Without music + lyrics + translation + no daff) [h6WIgL5UAsg].mp3
-Dec 16 01:58 : update: removing Tabalagh bil qaleel (Without music + lyrics + translation + no daff) [h6WIgL5UAsg].mp3
-Dec 16 01:58 : update: added /taballagh-bil-qaleel.mp3
-Dec 16 01:58 : update: removing Ommi - Ahmed Bukhatir I  لسوف أعود يا أمي - أحمد بوخاطر (النسخة الأصلية) [xIZtunlWEjc].mp3
-Dec 16 01:58 : update: added /ya-ummi.mp3
-Dec 16 02:09 : player: played "ya-ummi.mp3"
-Dec 16 02:18 : player: played "ab-yad-na-aao.mp3"
-Dec 16 02:27 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Dec 16 02:30 : player: played "ab-yad-na-aao.mp3"
-Dec 16 02:54 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Dec 16 02:59 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Dec 16 10:18 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Dec 16 10:31 : player: played "taballagh-bil-qaleel.mp3"
-Dec 16 12:01 : output: Failed to play on "pulseaudio" (pulse): disconnected
-Dec 16 12:03 : exception: Failed to open "pulseaudio" (pulse); pa_context_connect() has failed: Connection refused
-Dec 16 12:03 : exception: Failed to open "pulseaudio" (pulse); pa_context_connect() has failed: Connection refused
-Dec 16 12:03 : exception: Failed to open "pulseaudio" (pulse); pa_context_connect() has failed: Connection refused
-Dec 16 12:04 : player: played "ya-ummi.mp3"
-Dec 16 12:12 : player: played "ya-ummi.mp3"
-Dec 16 12:21 : player: played "ab-yad-na-aao.mp3"
-Dec 16 12:29 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Dec 16 12:33 : player: played "taballagh-bil-qaleel.mp3"
-Dec 16 12:38 : player: played "ya-ummi.mp3"
-Dec 16 19:38 : player: played "ab-yad-na-aao.mp3"
-Dec 16 19:46 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Dec 16 19:50 : player: played "taballagh-bil-qaleel.mp3"
-Dec 16 19:56 : player: played "ya-ummi.mp3"
-Dec 17 19:23 : player: played "taballagh-bil-qaleel.mp3"
-Dec 17 19:29 : player: played "ya-ummi.mp3"
-Dec 17 20:04 : player: played "somewhere-only-we-know.mp3"
-Dec 17 21:12 : player: played "taballagh-bil-qaleel.mp3"
-Dec 17 21:17 : player: played "ya-ummi.mp3"
-Dec 17 23:19 : player: played "somewhere-only-we-know.mp3"
-Dec 17 23:44 : player: played "ab-yad-na-aao.mp3"
-Dec 17 23:52 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Dec 17 23:56 : player: played "taballagh-bil-qaleel.mp3"
-Dec 18 00:02 : player: played "ya-ummi.mp3"
-Dec 18 00:06 : player: played "somewhere-only-we-know.mp3"
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-Dec 19 22:10 : player: played "taballagh-bil-qaleel.mp3"
-Dec 19 23:41 : player: played "taballagh-bil-qaleel.mp3"
-Dec 19 23:46 : player: played "ya-ummi.mp3"
-Dec 19 23:50 : player: played "somewhere-only-we-know.mp3"
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-Dec 21 10:01 : player: played "ab-yad-na-aao.mp3"
-Dec 21 11:03 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Dec 22 23:05 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Dec 23 02:22 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Dec 23 13:04 : player: played "somewhere-only-we-know.mp3"
-Dec 23 21:40 : update: added /089.mp3
-Dec 23 21:40 : update: added /021.mp3
-Dec 23 21:40 : update: added /088.mp3
-Dec 23 21:40 : update: added /073.mp3
-Dec 23 21:40 : update: added /030.mp3
-Dec 23 21:40 : update: added /036.mp3
-Dec 23 21:40 : update: added /079.mp3
-Dec 23 21:40 : update: added /086.mp3
-Dec 23 21:40 : update: added /044.mp3
-Dec 23 21:40 : update: added /015.mp3
-Dec 23 21:40 : update: added /043.mp3
-Dec 23 21:44 : player: played "ab-yad-na-aao.mp3"
-Dec 24 11:12 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Dec 24 14:22 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Dec 24 16:21 : player: played "015.mp3"
-Dec 24 23:15 : player: played "021.mp3"
-Dec 25 02:49 : player: played "021.mp3"
-Dec 25 03:27 : player: played "021.mp3"
-Dec 25 04:25 : player: played "021.mp3"
-Dec 25 13:07 : player: played "021.mp3"
-Dec 25 13:53 : player: played "021.mp3"
-Dec 25 13:58 : player: played "021.mp3"
-Dec 25 14:01 : player: played "021.mp3"
-Dec 25 15:57 : player: played "021.mp3"
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-Dec 26 18:04 : player: played "021.mp3"
-Dec 26 18:17 : player: played "044.mp3"
-Dec 28 00:03 : player: played "somewhere-only-we-know.mp3"
-Dec 28 01:30 : player: played "shounen-ki.mp3"
-Dec 28 12:47 : player: played "somewhere-only-we-know.mp3"
-Dec 28 13:23 : player: played "taballagh-bil-qaleel.mp3"
-Dec 28 18:40 : player: played "taballagh-bil-qaleel.mp3"
-Dec 28 18:45 : player: played "ya-ummi.mp3"
-Dec 28 18:48 : player: played "shounen-ki.mp3"
-Dec 29 13:07 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Dec 29 16:12 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Dec 30 16:29 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Dec 31 17:18 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Jan 01 21:41 : player: played "ab-yad-na-aao.mp3"
-Jan 01 21:49 : player: played "jinhe-sahar-nigal-gayi.mp3"
-Jan 01 21:53 : player: played "taballagh-bil-qaleel.mp3"
-Jan 01 21:58 : player: played "ya-ummi.mp3"
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
-WARNING: Unhandled message: interface=org.freedesktop.DBus, path=/org/freedesktop/DBus, member=ActivatableServicesChanged
+2025-05-11T21:37:38 exception: Failed to open "/home/thunder/.config/mpd/state": No such file or directory
+2025-05-11T21:37:38 update: added /allahu.mp3
+2025-05-11T21:37:38 update: added /001.mp3
+2025-05-11T21:37:38 update: added /Allahu Allah -  Labbayk [gvILQivnT1M].mp3
+2025-05-11T21:37:38 update: added /assinu-lana.mp3
+2025-05-11T21:37:38 update: added /dard-barta-gaya.mp3
+2025-05-11T21:37:38 update: added /hamne-akho-se-dekha.mp3
+2025-05-11T21:37:38 update: added /Heartfelt Kids Naat 2021- Faslon Ko Takaluf Hay Ham Se Agar- Raees Asif UK.m4a
+2025-05-11T21:37:38 update: added /Huliya E Mubarak _ Miyana Qad _ حلیہ مبارک رسول اکرم ﷺ_ Hafiz Abdul Basit Hassani Naqshbandi.mp4
+2025-05-11T21:37:38 update: added /hum nagmaye qurani.m4a
+2025-05-11T21:37:38 update: added /Ilaika.mp3
+2025-05-11T21:37:38 update: added /iltija.mp3
+2025-05-11T21:37:38 update: added /Iltija.mp4
+2025-05-11T21:37:38 update: added /ishq-ki-rang-kalam-adib-raipuri.mp4
+2025-05-11T21:37:38 update: added /jinhe-sahar.mp3
+2025-05-11T21:37:38 update: added /Jundullah.mp3
+2025-05-11T21:37:38 update: added /khuddimana.mp3
+2025-05-11T21:37:38 update: added /khun-ranga-poth.mp3
+2025-05-11T21:37:38 update: added /lineage-of-rasul.mp4
+2025-05-11T21:37:38 update: added /ma-wa-hanna.mp3
+2025-05-11T21:37:38 update: added /meri-ulfat-madine-se.mp3
+2025-05-11T21:37:38 update: added /mora-mrittujoyi.mp3
+2025-05-11T21:37:38 update: added /mora.m4a
+2025-05-11T21:37:38 update: added /mujhe-kufa-walo-musafir-na-samjho.mp3
+2025-05-11T21:37:38 update: added /nashhed-collection.mp3
+2025-05-11T21:37:38 update: added /nazre-karam-sarkar.mp3
+2025-05-11T21:37:38 update: added /New Heart Touching Naat 2020 - Haji Hussain Yousuf Memon - Nazar e Karam Sarkar - Heera Gold.mp4
+2025-05-11T21:37:38 update: added /pather-durotto.mp3
+2025-05-11T21:37:38 update: added /Pother Durotto _ পথের দূরত্ব _ Nasheed _ Jackscrew Creatives [fNoLRhxSGzs].webm
+2025-05-11T21:37:38 update: added /Powerful Recitation by Muhammad Luhaidan ᴴᴰ [V9iKjN3v5uw].mp3
+2025-05-11T21:37:38 update: added /Reaction Motivational Nasheed - Ghustakh e  Muhammad Ka Sar Tan se Juda - Hafiz Hassan Anzar - #nabi [nvzPkka9J08].webm
+2025-05-11T21:37:38 update: added /sar-tan-se-juda.mp3
+2025-05-11T21:37:38 update: added /siddiqe-akbar.mp3
+2025-05-11T21:37:38 update: added /Surah Az Zukhruf 74-80 ~ Idris Abkar- (ENGLISH SUBS) POWERFUL RECITATION!!.m4a
+2025-05-11T21:37:38 update: added /SYRIA - Very Powerful Emotional Nasheed ᴴᴰ [xxWo9UO4B3A].mp3
+2025-05-11T21:37:38 update: added /tabsirah.mp3
+2025-05-11T21:37:38 update: added /tobu-mora-durjoy.mp3
+2025-05-11T21:37:38 update: added /umar-tujh-sa-jamane-ne.mp3
+2025-05-11T21:37:38 update: added /vora-ei-joubone.mp3
+2025-05-11T21:37:38 update: added /wajhun bihi.mp4
+2025-05-11T21:37:38 update: added /Woh Pagal Si OST ｜ Sibtain Khalid ｜ ARY Digital [kI8CfqBdzKI] [vocals].mp3
+2025-05-11T21:37:38 update: added /yawmul-mazid.mp3
+2025-05-11T21:37:38 update: added /002.mp3
+2025-05-11T21:37:38 update: added /039.mp3
+2025-05-11T21:37:38 update: added /006.mp3
+2025-05-11T21:49:50 player: played "pather-durotto.mp3"
+2025-05-13T00:59:05 player: played "002.mp3"
+2025-05-13T19:12:41 player: played "002.mp3"
+2025-05-13T23:18:31 player: played "002.mp3"
+2025-05-14T01:25:22 player: played "002.mp3"
+2025-05-14T09:52:48 player: played "002.mp3"
+2025-05-14T10:00:20 player: played "002.mp3"
+2025-05-14T10:39:07 player: played "002.mp3"
+2025-05-14T19:56:33 player: played "002.mp3"
+2025-05-15T00:14:11 player: played "002.mp3"
+2025-05-16T01:53:08 player: played "002.mp3"
+2025-05-17T01:37:59 player: played "002.mp3"
+2025-05-17T23:31:52 player: played "002.mp3"
+2025-05-18T00:17:08 player: played "002.mp3"
+2025-05-18T12:43:43 player: played "002.mp3"
+2025-05-18T16:20:22 player: played "002.mp3"
+2025-05-18T16:31:01 player: played "002.mp3"
+2025-05-18T21:18:48 player: played "Allahu Allah -  Labbayk [gvILQivnT1M].mp3"
+2025-05-19T00:07:53 player: played "iltija.mp3"
+2025-05-19T07:27:08 update: updating /002.mp3
+2025-05-19T07:27:08 update: updating /039.mp3
+2025-05-19T07:27:16 player: played "iltija.mp3"
+2025-05-20T02:46:03 player: played "iltija.mp3"
+2025-05-20T12:50:47 player: played "iltija.mp3"
+2025-05-20T16:50:51 player: played "iltija.mp3"
+2025-05-21T01:31:05 player: played "iltija.mp3"
+2025-05-21T13:27:24 player: played "iltija.mp3"
+2025-05-21T16:51:06 player: played "iltija.mp3"
