@@ -68,8 +68,13 @@ alias nv="NVIM_APPNAME=LazyVim nvim"
 alias nvim-my="NVIM_APPNAME=MyNvim nvim"
 alias nl="NVIM_APPNAME=LazyVim nvim"
 alias ff="fastfetch -c ~/.config/fastfetch/presets/12.jsonc"
+## Git
 alias gs="git status"
 alias ga="git add ."
+alias gd="git diff"
+alias gl="git log"
+alias gp="git push"
+alias gi="git init"
 alias ml="source ~/.research/bin/activate"
 alias ta="tmux a -t"
 alias xampp="ampp.sh"
@@ -87,6 +92,7 @@ alias yta-flac="yt-dlp --extract-audio --audio-format flac "
 alias yta-mp3="yt-dlp --extract-audio --audio-format mp3 "
 alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
 
+alias y="yazi"
 export FZF_DEFAULT_OPTS="
 	--color=fg:#908caa,bg:#191724,hl:#ebbcba
 	--color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba

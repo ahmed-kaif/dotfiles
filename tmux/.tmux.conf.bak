@@ -1,0 +1,73 @@
+unbind r
+bind r source-file ~/.tmux.conf
+
+set -g mouse on
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+# set -g @plugin 'catppuccin/tmux'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'fcsonline/tmux-thumbs'
+
+# set-option -g status-position top
+#
+# set -g @catppuccin_application_icon "⚙"
+
+setw -g mode-keys vi
+set -g prefix C-a
+unbind-key C-b
+
+set-option -g prefix C-a
+unbind-key C-a
+bind-key C-a send-prefix
+unbind [
+bind Escape copy-mode
+bind -T copy-mode-vi v send -X begin-selection
+bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "pbcopy"
+bind P paste-buffer
+bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy"
+bind -n C-k send-keys "clear && tmux clear-history" \; send-keys "Enter"  
+bind C-l send-keys 'C-l'
+bind r source-file ~/.tmux.conf \; display "Reloaded!"
+bind | split-window -h
+bind - split-window -v
+# Smart pane switching with awareness of Vim splits.
+# See: https://github.com/christoomey/vim-tmux-navigator
+is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
+    | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|l?n?vim?x?|fzf)(diff)?$'"
+bind-key -n 'C-h' if-shell "$is_vim" 'send-keys C-h'  'select-pane -L'
+bind-key -n 'C-j' if-shell "$is_vim" 'send-keys C-j'  'select-pane -D'
+bind-key -n 'C-k' if-shell "$is_vim" 'send-keys C-k'  'select-pane -U'
+bind-key -n 'C-l' if-shell "$is_vim" 'send-keys C-l'  'select-pane -R'
+tmux_version='$(tmux -V | sed -En "s/^tmux ([0-9]+(.[0-9]+)?).*/\1/p")'
+if-shell -b '[ "$(echo "$tmux_version < 3.0" | bc)" = 1 ]' \
+    "bind-key -n 'C-\\' if-shell \"$is_vim\" 'send-keys C-\\'  'select-pane -l'"
+if-shell -b '[ "$(echo "$tmux_version >= 3.0" | bc)" = 1 ]' \
+    "bind-key -n 'C-\\' if-shell \"$is_vim\" 'send-keys C-\\\\'  'select-pane -l'"
+
+bind-key -T copy-mode-vi 'C-h' select-pane -L
+bind-key -T copy-mode-vi 'C-j' select-pane -D
+bind-key -T copy-mode-vi 'C-k' select-pane -U
+bind-key -T copy-mode-vi 'C-l' select-pane -R
+bind-key -T copy-mode-vi 'C-\' select-pane -l
+
+set -g @continuum-restore 'on'
+set -g status-interval 5
+set -s escape-time 0
+set -g base-index 1
+set -g status-position top
+setw -g pane-base-index 1
+setw -g monitor-activity on
+set -g visual-activity on
+setw -g mouse on
+set-option -g focus-events on
+bind-key x kill-pane # skip "kill-pane 1? (y/n)" prompt
+set -g detach-on-destroy off  # don't exit from tmux when closing a session
+set -g renumber-windows on   # renumber all windows when any window is closed
+set -g history-limit 1000000 # increase history size (from 2,000)
+# Load theme
+if-shell "[[ \"$TMUX_THEME\" == \"catppuccin\" ]]" 'source-file ~/dotfiles/tmux/catppuccin-theme.conf' ""
+if-shell "[[ \"$TMUX_THEME\" == \"nord\" ]]" 'source-file ~/dotfiles/tmux/nord-theme.conf' ""
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
