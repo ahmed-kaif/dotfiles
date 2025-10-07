@@ -1,15 +1,22 @@
-sw_volume: 62
+sw_volume: 100
 audio_device_state:1:pulseaudio
 audio_device_state:1:Visualizer
-state: stop
-random: 0
-repeat: 0
+state: pause
+current: 3
+time: 155.013
+random: 1
+repeat: 1
 single: 0
 consume: 0
-crossfade: 0
+crossfade: 5
 mixrampdb: 0
 mixrampdelay: -1
 lastloadedplaylist: 
 playlist_begin
 0:Allahu Allah -  Labbayk [gvILQivnT1M].mp3
+1:Baraa Masoud - Rahmatun Lil'Alamen (COVER) - ｜ Vocals Only براء مسعود - رحمة للعالمين ｜ بدون موسيقى [5BBmPVk99JI].mp3
+2:iltija.mp3
+3:yawmul-mazid.mp3
+4:Jundullah.mp3
+5:039.mp3
 playlist_end

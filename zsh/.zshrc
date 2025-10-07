@@ -1,6 +1,9 @@
+EDITOR=nvim
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
    mkdir -p "$(dirname $ZINIT_HOME)"
@@ -32,6 +35,8 @@ bindkey '^n' history-search-forward
 bindkey '^[w' kill-region
 bindkey '^xp' pdf
 bindkey '^xe' edit
+
+export PATH=$HOME/.local/bin:$PATH
 
 # History
 HISTSIZE=5000
@@ -75,6 +80,8 @@ alias gd="git diff"
 alias gl="git log"
 alias gp="git push"
 alias gi="git init"
+alias dev="git switch dev"
+alias gm="git switch master"
 alias ml="source ~/.research/bin/activate"
 alias ta="tmux a -t"
 alias xampp="ampp.sh"
@@ -92,6 +99,8 @@ alias yta-flac="yt-dlp --extract-audio --audio-format flac "
 alias yta-mp3="yt-dlp --extract-audio --audio-format mp3 "
 alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
 
+alias track="~/study_tracker/main.py"
+
 alias y="yazi"
 export FZF_DEFAULT_OPTS="
 	--color=fg:#908caa,bg:#191724,hl:#ebbcba
@@ -106,3 +115,5 @@ fastfetch -c ~/.config/fastfetch/presets/12.jsonc
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
