@@ -12,7 +12,7 @@ fi
 
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
-
+export GPG_TTY=$(tty)
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -25,7 +25,9 @@ zinit snippet OMZP::command-not-found
 
 # Load completions
 autoload -Uz compinit && compinit
-
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
 zinit cdreplay -q
 
 # Keybindings
@@ -90,7 +92,7 @@ alias i="sudo dnf install"
 alias pkg="dnf list --installed | fzf"
 ### FZF
 alias edit='fzf --bind "enter:become(NVIM_APPNAME=LazyVim nvim {})"'
-alias pdf='fd -epdf | fzf --bind "enter:become(zathura  {} &)"'
+alias pdf='fd -e pdf --full-path "/home/thunder/"| fzf --bind "enter:become(zathura  {} &)"'
 alias hist="history | fzf | awk '{ \$1=\"\"; print}' | wl-copy"
 # youtube download
 alias yta-aac="yt-dlp --extract-audio --audio-format aac "
@@ -101,6 +103,8 @@ alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+besta
 
 alias track="~/study_tracker/main.py"
 
+# Course Work
+alias lab="cd cse-32 && code . --profile='Research'"
 alias y="yazi"
 export FZF_DEFAULT_OPTS="
 	--color=fg:#908caa,bg:#191724,hl:#ebbcba
@@ -109,6 +113,7 @@ export FZF_DEFAULT_OPTS="
 	--color=spinner:#f6c177,info:#9ccfd8
 	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
 
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 fastfetch -c ~/.config/fastfetch/presets/12.jsonc
 
 # Shell integrations
@@ -117,3 +122,10 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
+
+# opencode
+export PATH=/home/thunder/.opencode/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
