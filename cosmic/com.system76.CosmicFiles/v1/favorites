@@ -1,0 +1,14 @@
+[
+    Home,
+    Documents,
+    Downloads,
+    Music,
+    Pictures,
+    Videos,
+    Path("/home/thunder/dotfiles"),
+    Path("/home/thunder/cse-31"),
+    Path("/home/thunder/Core/3-1 Materials"),
+    Path("/home/thunder/research"),
+    Path("/home/thunder/Core/3-2 Materials"),
+    Path("/home/thunder/Core/4-1 Materials"),
+]

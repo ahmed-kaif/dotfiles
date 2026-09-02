@@ -1,0 +1,30 @@
+{
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Return",
+        description: Some("Open Ghostty"),
+    ): Spawn("ghostty"),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "Return",
+    ): System(HomeFolder),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "F1",
+        description: Some("Show Routine"),
+    ): Spawn("zathura ~/Documents/Routine.pdf"),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "m",
+    ): Minimize,
+}
